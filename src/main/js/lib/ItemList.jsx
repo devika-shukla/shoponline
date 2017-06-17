@@ -16,7 +16,7 @@ class ItemList extends React.Component {
         });
     }
 
-    /*componentDidUpdate( prevProps, prevState ) {
+    componentDidUpdate( prevProps, prevState ) {
         if ( prevProps.categoryId != this.props.categoryId ) {
             fetch( '/categories/' + this.props.categoryId + '/items' ).then(( response ) => response.json() ).then(( responseJson ) => {
                 this.setState( { items: responseJson })
@@ -24,13 +24,6 @@ class ItemList extends React.Component {
             return true;
         }
         return false;
-    }*/
-    componentWillReceiveProps(nextProps){
-        if ( nextProps.categoryId != this.props.categoryId ) {
-            fetch( '/categories/' + nextProps.categoryId + '/items' ).then(( response ) => response.json() ).then(( responseJson ) => {
-                this.setState( { items: responseJson })
-            });
-        }
     }
 
     showItemForm( e ) {

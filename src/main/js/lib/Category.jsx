@@ -11,7 +11,7 @@ class Category extends React.Component {
             document.getElementById( 'heading' )
         );
         ReactDOM.render(
-            <ItemList categoryId={this.props.category.id} />,
+            <ItemList categoryId={this.props.category.id} state={[]} />,
             document.getElementById( 'itemsList' )
         );
     }
